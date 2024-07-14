@@ -8,11 +8,13 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @Binding var isOnboarding: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Button(action: {
+            isOnboarding = false
+        }, label: {
+            Text("온보딩 끝")
+        })
     }
-}
-
-#Preview {
-    OnboardingView()
 }

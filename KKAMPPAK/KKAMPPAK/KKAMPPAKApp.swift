@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct KKAMPPAKApp: App {
+    @AppStorage("isOnboarding") var isOnboarding: Bool = true
     var body: some Scene {
         WindowGroup {
-            MainView()
+            if isOnboarding {
+                OnboardingView(isOnboarding: $isOnboarding)
+            } else {
+                MainView()
+            }
         }
     }
 }
