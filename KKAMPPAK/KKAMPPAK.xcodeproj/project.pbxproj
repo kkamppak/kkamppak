@@ -8,17 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		132D2C912C439B1400EA705D /* KKAMPPAKApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D2C902C439B1400EA705D /* KKAMPPAKApp.swift */; };
-		132D2C932C439B1500EA705D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D2C922C439B1500EA705D /* ContentView.swift */; };
 		132D2C952C439B1A00EA705D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132D2C942C439B1A00EA705D /* Assets.xcassets */; };
 		132D2C982C439B1A00EA705D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132D2C972C439B1A00EA705D /* Preview Assets.xcassets */; };
+		132D2CAD2C43A04500EA705D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D2CAC2C43A04500EA705D /* MainView.swift */; };
+		132D2CAF2C43A06100EA705D /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D2CAE2C43A06100EA705D /* OnboardingView.swift */; };
+		132D2CB12C43A07000EA705D /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D2CB02C43A07000EA705D /* SettingView.swift */; };
+		132D2CB32C43A0A400EA705D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D2CB22C43A0A400EA705D /* LoadingView.swift */; };
+		132D2CB52C43A10000EA705D /* EyeMovingVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D2CB42C43A10000EA705D /* EyeMovingVIew.swift */; };
+		132D2CB72C43A10C00EA705D /* EyeBlinkingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D2CB62C43A10C00EA705D /* EyeBlinkingView.swift */; };
+		132D2CBA2C43A77D00EA705D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D2CB92C43A77D00EA705D /* Router.swift */; };
+		132D2CBE2C43B32600EA705D /* TrainingResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D2CBD2C43B32600EA705D /* TrainingResultView.swift */; };
+		132D2CC02C43B51900EA705D /* MakesPeopleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132D2CBF2C43B51900EA705D /* MakesPeopleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		132D2C8D2C439B1400EA705D /* KKAMPPAK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KKAMPPAK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		132D2C902C439B1400EA705D /* KKAMPPAKApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KKAMPPAKApp.swift; sourceTree = "<group>"; };
-		132D2C922C439B1500EA705D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		132D2C942C439B1A00EA705D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		132D2C972C439B1A00EA705D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		132D2CAC2C43A04500EA705D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		132D2CAE2C43A06100EA705D /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		132D2CB02C43A07000EA705D /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		132D2CB22C43A0A400EA705D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		132D2CB42C43A10000EA705D /* EyeMovingVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeMovingVIew.swift; sourceTree = "<group>"; };
+		132D2CB62C43A10C00EA705D /* EyeBlinkingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EyeBlinkingView.swift; sourceTree = "<group>"; };
+		132D2CB92C43A77D00EA705D /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		132D2CBD2C43B32600EA705D /* TrainingResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingResultView.swift; sourceTree = "<group>"; };
+		132D2CBF2C43B51900EA705D /* MakesPeopleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakesPeopleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +67,11 @@
 		132D2C8F2C439B1400EA705D /* KKAMPPAK */ = {
 			isa = PBXGroup;
 			children = (
+				132D2CAB2C439FF300EA705D /* Utilities */,
+				132D2CAA2C439FE900EA705D /* ViewModels */,
+				132D2CA92C439FE300EA705D /* Views */,
+				132D2CA82C439FDE00EA705D /* Models */,
 				132D2C902C439B1400EA705D /* KKAMPPAKApp.swift */,
-				132D2C922C439B1500EA705D /* ContentView.swift */,
 				132D2C942C439B1A00EA705D /* Assets.xcassets */,
 				132D2C962C439B1A00EA705D /* Preview Content */,
 			);
@@ -65,6 +84,51 @@
 				132D2C972C439B1A00EA705D /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		132D2CA82C439FDE00EA705D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		132D2CA92C439FE300EA705D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				132D2CBF2C43B51900EA705D /* MakesPeopleView.swift */,
+				132D2CAC2C43A04500EA705D /* MainView.swift */,
+				132D2CAE2C43A06100EA705D /* OnboardingView.swift */,
+				132D2CB02C43A07000EA705D /* SettingView.swift */,
+				132D2CB22C43A0A400EA705D /* LoadingView.swift */,
+				132D2CB42C43A10000EA705D /* EyeMovingVIew.swift */,
+				132D2CB62C43A10C00EA705D /* EyeBlinkingView.swift */,
+				132D2CBD2C43B32600EA705D /* TrainingResultView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		132D2CAA2C439FE900EA705D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		132D2CAB2C439FF300EA705D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				132D2CB82C43A76C00EA705D /* Navigation */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		132D2CB82C43A76C00EA705D /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				132D2CB92C43A77D00EA705D /* Router.swift */,
+			);
+			path = Navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +201,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				132D2C932C439B1500EA705D /* ContentView.swift in Sources */,
+				132D2CBA2C43A77D00EA705D /* Router.swift in Sources */,
+				132D2CC02C43B51900EA705D /* MakesPeopleView.swift in Sources */,
+				132D2CAF2C43A06100EA705D /* OnboardingView.swift in Sources */,
+				132D2CB12C43A07000EA705D /* SettingView.swift in Sources */,
+				132D2CB72C43A10C00EA705D /* EyeBlinkingView.swift in Sources */,
+				132D2CB52C43A10000EA705D /* EyeMovingVIew.swift in Sources */,
+				132D2CAD2C43A04500EA705D /* MainView.swift in Sources */,
+				132D2CBE2C43B32600EA705D /* TrainingResultView.swift in Sources */,
+				132D2CB32C43A0A400EA705D /* LoadingView.swift in Sources */,
 				132D2C912C439B1400EA705D /* KKAMPPAKApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

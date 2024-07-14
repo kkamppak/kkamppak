@@ -11,7 +11,7 @@ import SwiftUI
 struct KKAMPPAKApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView()
         }
     }
 }
