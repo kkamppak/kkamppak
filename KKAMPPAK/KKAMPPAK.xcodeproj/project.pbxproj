@@ -29,6 +29,7 @@
 		13B6FA9F2C53F5E6000BFD3A /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 13B6FA962C53F5E6000BFD3A /* Pretendard-Medium.otf */; };
 		13B6FAA02C53F5E6000BFD3A /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 13B6FA972C53F5E6000BFD3A /* Pretendard-ExtraBold.otf */; };
 		13B6FAA12C53F5E6000BFD3A /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 13B6FA982C53F5E6000BFD3A /* Pretendard-Regular.otf */; };
+		13B6FAA62C53FD56000BFD3A /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6FAA52C53FD56000BFD3A /* MainButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		13B6FA972C53F5E6000BFD3A /* Pretendard-ExtraBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-ExtraBold.otf"; sourceTree = "<group>"; };
 		13B6FA982C53F5E6000BFD3A /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		13B6FAA22C53F664000BFD3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		13B6FAA52C53FD56000BFD3A /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +90,9 @@
 		132D2C8F2C439B1400EA705D /* KKAMPPAK */ = {
 			isa = PBXGroup;
 			children = (
+				13B6FAA32C53FCDA000BFD3A /* Source */,
 				13B6FAA22C53F664000BFD3A /* Info.plist */,
 				13B6FA822C53F1BC000BFD3A /* Resources */,
-				132D2CAB2C439FF300EA705D /* Utilities */,
-				132D2CAA2C439FE900EA705D /* ViewModels */,
-				132D2CA92C439FE300EA705D /* Views */,
-				132D2CA82C439FDE00EA705D /* Models */,
 				132D2C902C439B1400EA705D /* KKAMPPAKApp.swift */,
 				132D2C962C439B1A00EA705D /* Preview Content */,
 			);
@@ -112,7 +111,8 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = Models;
+			name = Models;
+			path = ../Models;
 			sourceTree = "<group>";
 		};
 		132D2CA92C439FE300EA705D /* Views */ = {
@@ -134,14 +134,16 @@
 			isa = PBXGroup;
 			children = (
 			);
-			path = ViewModels;
+			name = ViewModels;
+			path = ../ViewModels;
 			sourceTree = "<group>";
 		};
 		132D2CAB2C439FF300EA705D /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				13B6FAA72C53FEF9000BFD3A /* Extension */,
+				13B6FAA42C53FCE9000BFD3A /* Component */,
 				132D2CB82C43A76C00EA705D /* Navigation */,
-				13B6FA8E2C53F245000BFD3A /* FontManager.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -177,6 +179,33 @@
 				13B6FA952C53F5E6000BFD3A /* Pretendard-Thin.otf */,
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		13B6FAA32C53FCDA000BFD3A /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				132D2CAB2C439FF300EA705D /* Utilities */,
+				132D2CAA2C439FE900EA705D /* ViewModels */,
+				132D2CA92C439FE300EA705D /* Views */,
+				132D2CA82C439FDE00EA705D /* Models */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		13B6FAA42C53FCE9000BFD3A /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				13B6FAA52C53FD56000BFD3A /* MainButton.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		13B6FAA72C53FEF9000BFD3A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				13B6FA8E2C53F245000BFD3A /* FontManager.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +295,7 @@
 				132D2CB52C43A10000EA705D /* EyeMovingVIew.swift in Sources */,
 				13B6FA8F2C53F245000BFD3A /* FontManager.swift in Sources */,
 				132D2CAD2C43A04500EA705D /* MainView.swift in Sources */,
+				13B6FAA62C53FD56000BFD3A /* MainButton.swift in Sources */,
 				132D2CBE2C43B32600EA705D /* TrainingResultView.swift in Sources */,
 				132D2CB32C43A0A400EA705D /* LoadingView.swift in Sources */,
 				132D2C912C439B1400EA705D /* KKAMPPAKApp.swift in Sources */,
