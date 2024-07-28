@@ -9,10 +9,17 @@ import SwiftUI
 
 struct OnboardingView: View {
     @Binding var isOnboarding: Bool
-    @StateObject private var router = OnboardingRouter()
+    @State private var moveNextPage: Bool = false
+    @State private var offset: CGFloat = .zero
+    @State private var cardIndex = 0
+    @State private var timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    let cardItems = [OnboardingCard(imageName: "OnboardingImage1", discription: "밤에 스마트폰을 보느라\n 잠을 잘 수 없어요!", imageWidth: 156.66, imageHeight: 144.6, imgPaddingTop: 55, distance: 23.39),
+                     OnboardingCard(imageName: "OnboardingImage2", discription: "시간 가는 줄\n모르겠어요!", imageWidth: 136.4, imageHeight: 136.4, imgPaddingTop: 67, distance: 20.6),
+                     OnboardingCard(imageName: "OnboardingImage3", discription: "화면을 오래 보니\n눈이 뻑뻑해요!", imageWidth: 129.89, imageHeight: 117.49, imgPaddingTop: 75, distance: 34.51),
+    ]
     
     var body: some View {
-        NavigationStack(path: $router.route) {
+        NavigationStack {
             ScrollView {
                 VStack(alignment: .center, spacing: 0) {
                     VStack(alignment: .center, spacing: 10) {
@@ -27,11 +34,31 @@ struct OnboardingView: View {
                     }
                     .padding(.top, 94)
                     
-                    ScrollView(.horizontal) {
-                        HStack {
-                            OnboardingCard(imageName: "OnboardingImage1", discription: "밤에 스마트폰을 보느라\n 잠을 잘 수 없어요!", imageWidth: 156.66, imageHeight: 144.61)
-                            
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 20) {
+                            ForEach(0..<100) { i in
+                                let idx = i % cardItems.count
+                                OnboardingCard(imageName: cardItems[idx].imageName, discription: cardItems[idx].discription, imageWidth: cardItems[idx].imageWidth, imageHeight: cardItems[idx].imageHeight, imgPaddingTop: cardItems[idx].imgPaddingTop, distance:  cardItems[idx].distance)
+                            }
+                            .offset(x: offset)
+                            .onReceive(timer) { _ in
+                                withAnimation(.default) {
+                                    let scrollSpeed: CGFloat = 5
+                                    offset -= scrollSpeed
+                                    
+                                    if offset >= UIScreen.main.bounds.width {
+                                        cardIndex += 1
+                                        offset -= UIScreen.main.bounds.width
+                                    }
+                                    
+                                    if cardIndex >= cardItems.count + 1 {
+                                        cardIndex = 1
+                                        offset = 0
+                                    }
+                                }
+                            }
                         }
+                        .padding(.leading,20)
                     }
                     .padding(.top, 78)
                     
@@ -48,33 +75,24 @@ struct OnboardingView: View {
                     .padding(.top, 73)
                     
                     MainButton(btnText: "다음으로") {
-                        router.push(to: .onboardingSetting)
-                    }.id(1)
-                    
+                        moveNextPage = true
+                        
+                    }
                     .padding(.top, 92)
                     .padding(.bottom, 105)
+                    .navigationDestination(isPresented: $moveNextPage) {
+                        OnboardingSettingView(isOnboarding: $isOnboarding)
+                            .navigationBarBackButtonHidden()
+                    }
                 }
             }
             .background(Color.kkampakBlack)
         }
-        
     }
 }
 
 // Ex+ views
 extension OnboardingView {
-    @ViewBuilder
-    private func pageDesintaion(with type: OnboardingDestination) -> some View {
-        switch type {
-        case .onboardingIntro:
-            OnboardingView(isOnboarding: $isOnboarding)
-                .environmentObject(router)
-        case .onboardingSetting:
-            OnboardingSettingView(isOnboarding: $isOnboarding)
-                .environmentObject(router)
-        }
-    }
-    
     private func introArea() -> some View {
         VStack(alignment: .center, spacing: 0) {
             Text("Z세대의\n스마트폰 사용\n하루 평균 7시간")
@@ -113,8 +131,6 @@ extension OnboardingView {
         }
     }
 }
-
-
 
 #Preview {
     OnboardingView(isOnboarding: .constant(false))

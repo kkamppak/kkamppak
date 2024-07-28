@@ -9,7 +9,6 @@ import SwiftUI
 
 struct OnboardingSettingView: View {
     @Binding var isOnboarding: Bool
-    @EnvironmentObject var router: Router
     
     var body: some View {
         VStack(alignment: .center, spacing: 0) {
@@ -23,9 +22,32 @@ struct OnboardingSettingView: View {
                     .font(.custom("Pretendard-Regular", size: 16))
                     .foregroundStyle(Color.second)
                     .multilineTextAlignment(.center)
+            }.padding(.top, 123)
+            
+            VStack {
+                Text("시간 컴포넌트")
+            }.padding(.top,93)
+            
+            VStack(spacing: 24) {
+                MainButton(btnText: "이 시간으로 설정하기") {
+                    // TODO: 시간설정
+                }
+                
+                Text("지금은 넘어가기")
+                    .font(.title3Regular)
+                    .underline()
+                    .foregroundStyle(Color.second)
+                    .onTapGesture {
+                        isOnboarding.toggle()
+                    }
             }
+            .padding(.top, 104)
+            .padding(.bottom, 49)
         }
-        .padding(.top,123)
+        .frame(maxWidth: .infinity,maxHeight: .infinity)
+        .ignoresSafeArea()
+        .background(Color.kkampakBlack)
+        .navigationBarBackButtonHidden()
     }
 }
 

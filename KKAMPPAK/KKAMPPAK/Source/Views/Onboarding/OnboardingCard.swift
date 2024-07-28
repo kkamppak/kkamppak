@@ -13,33 +13,32 @@ struct OnboardingCard: View {
     let discription: String
     let imageWidth: CGFloat
     let imageHeight: CGFloat
+    let imgPaddingTop: CGFloat
+    let distance: CGFloat
 
     var body: some View {
         VStack(spacing: 0) {
             RoundedRectangle(cornerRadius: 30)
                 .frame(width: 280, height: 300)
                 .foregroundStyle(Color.white)
-                .overlay {
-                    VStack(spacing: 0) {
+                .overlay(alignment: .top) {
+                    VStack(alignment:.center,spacing: 0) {
                         Image(imageName)
                             .resizable()
                             .frame(width: imageWidth,height: imageHeight)
                             .scaledToFill()
-                            .border(.black)
+                            .padding(.trailing, imageName == "OnboardingImage1" ? 12 : 0)
+                            .padding(.top, imgPaddingTop)
+                        
                         Text(discription)
                             .font(.title3Regular)
                             .foregroundStyle(Color.third)
                             .multilineTextAlignment(.center)
+                            .padding(.top,distance)
                         
                     }
                 }
+                .frame(width: 280, height: 300)
         }
-        .border(.red)
-        
-        
     }
-}
-
-#Preview {
-    OnboardingCard(imageName: "OnboardingImage1", discription: "밤에 스마트폰을 보느라 잠을 잘 수 없어요!", imageWidth: 156.66, imageHeight: 144.61)
 }
