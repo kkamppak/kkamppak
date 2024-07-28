@@ -16,6 +16,27 @@ public enum Destination: Hashable {
     case makesPeople
 }
 
+public enum OnboardingDestination: Hashable {
+    case onboardingIntro
+    case onboardingSetting
+}
+
+public final class OnboardingRouter: ObservableObject {
+    @Published public var route: [OnboardingDestination] = []
+    
+    func push(to destination: OnboardingDestination) {
+        route.append(destination)
+    }
+    
+    func pop() {
+        route.removeLast()
+    }
+    
+    func popToRoot() {
+        route.removeLast(route.count)
+    }
+}
+
 public final class Router: ObservableObject {
     @Published public var route: [Destination] = []
     
