@@ -30,6 +30,13 @@
 		13B6FAA02C53F5E6000BFD3A /* Pretendard-ExtraBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 13B6FA972C53F5E6000BFD3A /* Pretendard-ExtraBold.otf */; };
 		13B6FAA12C53F5E6000BFD3A /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 13B6FA982C53F5E6000BFD3A /* Pretendard-Regular.otf */; };
 		13B6FAA62C53FD56000BFD3A /* MainButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13B6FAA52C53FD56000BFD3A /* MainButton.swift */; };
+		13E1F0042C550C4D00B69D3F /* OnboardingCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1F0032C550C4D00B69D3F /* OnboardingCard.swift */; };
+		13E1F0062C55225B00B69D3F /* GIFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1F0052C55225B00B69D3F /* GIFView.swift */; };
+		13E1F00B2C55263A00B69D3F /* OnoboardingSide.gif in Resources */ = {isa = PBXBuildFile; fileRef = 13E1F0082C55263900B69D3F /* OnoboardingSide.gif */; };
+		13E1F00C2C55263A00B69D3F /* OnboardingBlink.gif in Resources */ = {isa = PBXBuildFile; fileRef = 13E1F0092C55263900B69D3F /* OnboardingBlink.gif */; };
+		13E1F00D2C55263A00B69D3F /* OnboardingGif.gif in Resources */ = {isa = PBXBuildFile; fileRef = 13E1F00A2C55263A00B69D3F /* OnboardingGif.gif */; };
+		13E1F00F2C55271300B69D3F /* NextCard.gif in Resources */ = {isa = PBXBuildFile; fileRef = 13E1F00E2C55271300B69D3F /* NextCard.gif */; };
+		13E1F0112C568CEF00B69D3F /* OnboardingSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13E1F0102C568CEF00B69D3F /* OnboardingSettingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +65,13 @@
 		13B6FA982C53F5E6000BFD3A /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		13B6FAA22C53F664000BFD3A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		13B6FAA52C53FD56000BFD3A /* MainButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainButton.swift; sourceTree = "<group>"; };
+		13E1F0032C550C4D00B69D3F /* OnboardingCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCard.swift; sourceTree = "<group>"; };
+		13E1F0052C55225B00B69D3F /* GIFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GIFView.swift; sourceTree = "<group>"; };
+		13E1F0082C55263900B69D3F /* OnoboardingSide.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = OnoboardingSide.gif; sourceTree = "<group>"; };
+		13E1F0092C55263900B69D3F /* OnboardingBlink.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = OnboardingBlink.gif; sourceTree = "<group>"; };
+		13E1F00A2C55263A00B69D3F /* OnboardingGif.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = OnboardingGif.gif; sourceTree = "<group>"; };
+		13E1F00E2C55271300B69D3F /* NextCard.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = NextCard.gif; sourceTree = "<group>"; };
+		13E1F0102C568CEF00B69D3F /* OnboardingSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSettingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,9 +132,9 @@
 		132D2CA92C439FE300EA705D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				13E1F0022C550C3400B69D3F /* Onboarding */,
 				132D2CBF2C43B51900EA705D /* MakesPeopleView.swift */,
 				132D2CAC2C43A04500EA705D /* MainView.swift */,
-				132D2CAE2C43A06100EA705D /* OnboardingView.swift */,
 				132D2CB02C43A07000EA705D /* SettingView.swift */,
 				132D2CB22C43A0A400EA705D /* LoadingView.swift */,
 				132D2CB42C43A10000EA705D /* EyeMovingVIew.swift */,
@@ -144,6 +158,7 @@
 				13B6FAA72C53FEF9000BFD3A /* Extension */,
 				13B6FAA42C53FCE9000BFD3A /* Component */,
 				132D2CB82C43A76C00EA705D /* Navigation */,
+				13E1F0052C55225B00B69D3F /* GIFView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -159,6 +174,7 @@
 		13B6FA822C53F1BC000BFD3A /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				13E1F0072C55260500B69D3F /* Gifs */,
 				13B6FA842C53F217000BFD3A /* Font */,
 				132D2C942C439B1A00EA705D /* Assets.xcassets */,
 			);
@@ -206,6 +222,27 @@
 				13B6FA8E2C53F245000BFD3A /* FontManager.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		13E1F0022C550C3400B69D3F /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				132D2CAE2C43A06100EA705D /* OnboardingView.swift */,
+				13E1F0032C550C4D00B69D3F /* OnboardingCard.swift */,
+				13E1F0102C568CEF00B69D3F /* OnboardingSettingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		13E1F0072C55260500B69D3F /* Gifs */ = {
+			isa = PBXGroup;
+			children = (
+				13E1F00E2C55271300B69D3F /* NextCard.gif */,
+				13E1F0092C55263900B69D3F /* OnboardingBlink.gif */,
+				13E1F00A2C55263A00B69D3F /* OnboardingGif.gif */,
+				13E1F0082C55263900B69D3F /* OnoboardingSide.gif */,
+			);
+			path = Gifs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,12 +303,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13E1F00C2C55263A00B69D3F /* OnboardingBlink.gif in Resources */,
 				132D2C982C439B1A00EA705D /* Preview Assets.xcassets in Resources */,
+				13E1F00F2C55271300B69D3F /* NextCard.gif in Resources */,
 				13B6FA9C2C53F5E6000BFD3A /* Pretendard-Bold.otf in Resources */,
 				13B6FAA02C53F5E6000BFD3A /* Pretendard-ExtraBold.otf in Resources */,
 				13B6FA9D2C53F5E6000BFD3A /* Pretendard-SemiBold.otf in Resources */,
 				13B6FA9E2C53F5E6000BFD3A /* Pretendard-Thin.otf in Resources */,
 				132D2C952C439B1A00EA705D /* Assets.xcassets in Resources */,
+				13E1F00B2C55263A00B69D3F /* OnoboardingSide.gif in Resources */,
+				13E1F00D2C55263A00B69D3F /* OnboardingGif.gif in Resources */,
 				13B6FA9A2C53F5E6000BFD3A /* Pretendard-ExtraLight.otf in Resources */,
 				13B6FA992C53F5E6000BFD3A /* Pretendard-Light.otf in Resources */,
 				13B6FAA12C53F5E6000BFD3A /* Pretendard-Regular.otf in Resources */,
@@ -289,14 +330,17 @@
 			files = (
 				132D2CBA2C43A77D00EA705D /* Router.swift in Sources */,
 				132D2CC02C43B51900EA705D /* MakesPeopleView.swift in Sources */,
+				13E1F0042C550C4D00B69D3F /* OnboardingCard.swift in Sources */,
 				132D2CAF2C43A06100EA705D /* OnboardingView.swift in Sources */,
 				132D2CB12C43A07000EA705D /* SettingView.swift in Sources */,
 				132D2CB72C43A10C00EA705D /* EyeBlinkingView.swift in Sources */,
 				132D2CB52C43A10000EA705D /* EyeMovingVIew.swift in Sources */,
 				13B6FA8F2C53F245000BFD3A /* FontManager.swift in Sources */,
 				132D2CAD2C43A04500EA705D /* MainView.swift in Sources */,
+				13E1F0112C568CEF00B69D3F /* OnboardingSettingView.swift in Sources */,
 				13B6FAA62C53FD56000BFD3A /* MainButton.swift in Sources */,
 				132D2CBE2C43B32600EA705D /* TrainingResultView.swift in Sources */,
+				13E1F0062C55225B00B69D3F /* GIFView.swift in Sources */,
 				132D2CB32C43A0A400EA705D /* LoadingView.swift in Sources */,
 				132D2C912C439B1400EA705D /* KKAMPPAKApp.swift in Sources */,
 			);
